@@ -2,7 +2,7 @@ import NavBar from '../components/NavBar'
 import TourneyIndivListing from '../components/TourneyIndivListing'
 import axios from 'axios'
 import { useState } from 'react'
-const url = "http://localhost:8000/api/get/"
+const url = "https://django-backend-p3s7.onrender.com/api/get"
 
 export default function AllTourney() {
 
