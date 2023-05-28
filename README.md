@@ -1,2 +1,2 @@
-# orbitalbackend
-Django Backend for nusscores.com
+# nusscores.com
+Django Backend + React Frontend for nusscores.com
