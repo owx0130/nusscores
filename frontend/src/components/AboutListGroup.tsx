@@ -63,7 +63,7 @@ export default function AboutListGroup() {
           standardized platform.
         </li>
         <li className="list-group-item fs-4 fw-bold">Our Aim</li>
-        <li className="list-group-item">
+        <li className="list-group-item pb-5">
           We aim to create a web application that can streamline the
           scorekeeping of sports tournaments. The convening body will be able to
           create different tournament brackets (i.e. single elimination, double
