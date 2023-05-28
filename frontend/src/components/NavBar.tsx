@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function NavBar() {
   return (
     <>
@@ -25,9 +27,9 @@ export default function NavBar() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/about">
-                About
-              </a>
+              <Link to='/about'>
+                <span className="nav-link">About</span>
+              </Link>
             </li>
             <li className="nav-item dropdown">
               <a
