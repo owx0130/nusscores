@@ -6,7 +6,7 @@ import EditTourney from './pages/EditTourney'
 import AllTourney from './pages/AllTourneys'
 
 export default function App() {
-  
+
   return (
     <Routes>
       <Route path='/' element={<Home />} />
