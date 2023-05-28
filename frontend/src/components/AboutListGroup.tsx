@@ -49,7 +49,7 @@ export default function AboutListGroup() {
           <br />
           As such, we would like to create a web-application that every hall can
           utilize such that audiences will have easy, standardized and accurate
-          access to the correct\ scores, team sheets and match ups. Given that
+          access to the correct scores, team sheets and match ups. Given that
           inter-hall games is not the sole sporting event in NUS, nusscores.com
           has huge potential. It can be adopted in the Inter-Hall Games,
           Inter-College Games or Varsity Games.
