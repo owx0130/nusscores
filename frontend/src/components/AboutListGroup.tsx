@@ -10,6 +10,7 @@ export default function AboutListGroup() {
               <div className="card">
                 <div className="card-body">
                   <h5 className="card-title text-center">Ong Wei Xiang</h5>
+                  <img src="https://drive.google.com/uc?export=view&id=1noowQn1LKZ0glHUmoODbU5IvzB-mp5q3" className="img-thumbnail"/>
                   <p className="card-text text-center">
                     Y1 Computer Engineering
                   </p>
