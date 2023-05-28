@@ -21,6 +21,7 @@ export default function AboutListGroup() {
               <div className="card">
                 <div className="card-body">
                   <h5 className="card-title text-center">Yeo Zong Yao</h5>
+                  <img src="https://drive.google.com/uc?export=view&id=1N-wtY-6CZaRBjXRe1IVV0o5q1plnnx3M" className="img-thumbnail"/>
                   <p className="card-text text-center">
                     Y1 Computer Engineering
                   </p>
