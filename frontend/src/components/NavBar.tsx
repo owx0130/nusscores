@@ -1,14 +1,14 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const navLink = {
-  textDecoration: 'None',
-}
+  textDecoration: "None",
+};
 
 export default function NavBar() {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <Link to='/' style={navLink}>
+        <Link to="/" style={navLink}>
           <span className="navbar-brand">nusscores.com</span>
         </Link>
         <button
@@ -26,15 +26,17 @@ export default function NavBar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <Link to='/' style={navLink}>
+              <Link to="/" style={navLink}>
                 <span className="nav-link">Home</span>
               </Link>
             </li>
+
             <li className="nav-item">
-              <Link to='/about' style={navLink}>
+              <Link to="/about" style={navLink}>
                 <span className="nav-link">About</span>
               </Link>
             </li>
+
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
@@ -48,17 +50,25 @@ export default function NavBar() {
                 Tournament
               </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <Link to='/createtourney' style={navLink}>
+                <Link to="/createtourney" style={navLink}>
                   <span className="dropdown-item">Create a bracket</span>
                 </Link>
-                <Link to='/edittourney' style={navLink}>
-                  <span className="dropdown-item">Edit existing bracket (NOT WORKING)</span>
+                <Link to="/edittourney" style={navLink}>
+                  <span className="dropdown-item">
+                    Edit existing bracket (NOT WORKING)
+                  </span>
                 </Link>
                 <div className="dropdown-divider"></div>
-                <Link to='/alltourney' style={navLink}>
+                <Link to="/alltourney" style={navLink}>
                   <span className="dropdown-item">See all tournaments</span>
                 </Link>
               </div>
+            </li>
+
+            <li className="nav-item">
+              <Link to="/logon" style={navLink}>
+                <span className="nav-link">Log In</span>
+              </Link>
             </li>
           </ul>
         </div>
