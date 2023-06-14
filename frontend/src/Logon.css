@@ -33,6 +33,15 @@ button {
     cursor: pointer;
 }
 
+.button {
+    margin: 1rem 0 0 0;
+    border:none;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 .registerbutton {
     background: none;
     color: black;

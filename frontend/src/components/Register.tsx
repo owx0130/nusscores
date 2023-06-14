@@ -38,7 +38,10 @@ export const Register = (props: any) => {
           id="password"
           name="password"
         />
-        <button type="submit"> Login </button>
+        <button className="button" type="submit">
+          {" "}
+          Login{" "}
+        </button>
       </form>
       <button
         className="registerbutton"
