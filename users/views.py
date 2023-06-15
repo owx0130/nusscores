@@ -1,16 +1,23 @@
+from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
-from rest_framework_simplejwt.views import TokenObtainPairView
+from .serializers import UserSerializer
+from django.contrib.auth import authenticate
+from django.contrib.auth.models import User
 
-class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
-    @classmethod
-    def get_token(cls, user):
-        token = super().get_token(user)
+@api_view(['POST'])
+def RegisterUser(request):
+    serializer = UserSerializer(data=request.data)
+    if serializer.is_valid():
+        User.objects.create_user(serializer.data['username'], serializer.data['email'], serializer.data['password'])
+        return Response(None, status=status.HTTP_201_CREATED)
 
-        token['username'] = user.username
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-        return token
+@api_view(['POST'])
+def LoginUser(request):
+    user = authenticate(username=request.data['username'], password=request.data['password'])
+    if user is not None:
+        return Response(None, status=status.HTTP_201_CREATED)
 
-class MyTokenObtainPairView(TokenObtainPairView):
-    serializer_class = MyTokenObtainPairSerializer
+    return Response(None, status=status.HTTP_400_BAD_REQUEST)

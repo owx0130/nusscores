@@ -50,7 +50,7 @@ export default function NavBar() {
                 Tournament
               </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <Link to="/createtourney" style={navLink}>
+                <Link to="/login" style={navLink}>
                   <span className="dropdown-item">Create a bracket</span>
                 </Link>
                 <Link to="/edittourney" style={navLink}>
@@ -63,12 +63,6 @@ export default function NavBar() {
                   <span className="dropdown-item">See all tournaments</span>
                 </Link>
               </div>
-            </li>
-
-            <li className="nav-item">
-              <Link to="/logon" style={navLink}>
-                <span className="nav-link">Log In</span>
-              </Link>
             </li>
           </ul>
         </div>

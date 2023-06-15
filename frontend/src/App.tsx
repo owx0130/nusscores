@@ -4,7 +4,8 @@ import About from "./pages/About";
 import CreateTourney from "./pages/CreateTourney";
 import EditTourney from "./pages/EditTourney";
 import AllTourney from "./pages/AllTourneys";
-import Logon from "./pages/Logon";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 export default function App() {
   return (
@@ -14,7 +15,8 @@ export default function App() {
       <Route path="/createtourney" element={<CreateTourney />} />
       <Route path="/edittourney" element={<EditTourney />} />
       <Route path="/alltourney" element={<AllTourney />} />
-      <Route path="/logon" element={<Logon />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
     </Routes>
   );
 }
