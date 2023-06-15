@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
+const REGISTER_URL = "https://django-backend-p3s7.onrender.com/users/register/";
 
 export const RegisterForm = () => {
   const [email, setEmail] = useState("");
@@ -12,7 +13,7 @@ export const RegisterForm = () => {
   const handleSubmit = (e: any) => {
     e.preventDefault();
     axios
-      .post("http://localhost:8000/users/register/", {
+      .post(REGISTER_URL, {
         username: username,
         email: email,
         password: pass,

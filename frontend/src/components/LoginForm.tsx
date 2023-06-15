@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../Logon.css";
+const LOGIN_URL = "https://django-backend-p3s7.onrender.com/users/login/";
 
 export const LoginForm = () => {
   const [username, setUsername] = useState("");
@@ -11,7 +12,7 @@ export const LoginForm = () => {
 
   const handleSubmit = (e: any) => {  
     e.preventDefault();
-    axios.post("http://localhost:8000/users/login/", {
+    axios.post(LOGIN_URL, {
       username: username,
       password: pass,
     })
