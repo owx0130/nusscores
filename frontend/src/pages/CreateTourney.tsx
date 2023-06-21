@@ -1,7 +1,26 @@
 import NavBar from '../components/NavBar'
 import TourneyForm from '../components/TourneyForm'
+import TourneyIndivListing from '../components/TourneyIndivListing'
+import axios from 'axios'
+import { useState } from 'react'
+const url = "https://django-backend-p3s7.onrender.com/api/get"
 
 export default function CreateTourney() {
+
+  const[data, setData] = useState([])
+
+
+    axios
+    .get(url)
+    .then(function (response) {
+      setData(response.data.slice(-1));
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  
+    
+
   return (
     <>
       <NavBar />
@@ -17,6 +36,12 @@ export default function CreateTourney() {
         <hr />
       </div>
       <TourneyForm />
-    </>
+      
+    
+        
+    {data.map((element) => <TourneyIndivListing data={element} />) }
+      
+    </> 
   )
+
 }
