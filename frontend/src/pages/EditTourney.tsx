@@ -1,7 +1,11 @@
+import { useLocation } from "react-router-dom";
 import EditForm from "../components/EditForm";
 import NavBar from "../components/NavBar";
 
 export default function EditTourney() {
+  let { state } = useLocation();
+  console.log(state)
+
   return (
     <>
       <NavBar />
@@ -16,7 +20,7 @@ export default function EditTourney() {
         <div className="col"></div>
       </div>
       <hr />
-      <EditForm />
+      <EditForm data={state}/>
     </>
   );
 }
