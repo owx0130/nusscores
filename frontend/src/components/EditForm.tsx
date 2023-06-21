@@ -11,6 +11,8 @@ export default function EditForm({ data }: any) {
   const [sport, setSport] = useState("");
   const [brackettype, setBracketType] = useState("");
 
+  console.log(data);
+
   const handleSubmit = (e: any) => {
     e.preventDefault();
     axios
