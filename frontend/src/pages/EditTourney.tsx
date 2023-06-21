@@ -1,7 +1,7 @@
 import EditForm from "../components/EditForm";
 import NavBar from "../components/NavBar";
 
-export default function EditTourney({ data }: any) {
+export default function EditTourney() {
   return (
     <>
       <NavBar />
@@ -16,7 +16,7 @@ export default function EditTourney({ data }: any) {
         <div className="col"></div>
       </div>
       <hr />
-      <EditForm data={data} />
+      <EditForm />
     </>
   );
 }

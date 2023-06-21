@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 const TOURNEY_URL = "https://django-backend-p3s7.onrender.com/api/post/";
 
-export default function EditForm({ data }: any) {
+export default function EditForm() {
   const [hallname, setHallName] = useState("");
   const [name, setName] = useState("");
 	const [currmatricnumber, setCurrMatricNumber] = useState("");
