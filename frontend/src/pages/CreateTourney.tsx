@@ -36,11 +36,11 @@ export default function CreateTourney() {
         <hr />
       </div>
       <TourneyForm />
-      
-      <div className="row">
+  
+      <div className="row" style={{padding: 50 }}>
         <div className="col"></div>
-        <table className="table table-striped w-75">
-          <thead>
+        <table className="table table-striped w-75" >
+          <thead >
             <tr>
               <th scope="col">Hall Name</th>
               <th scope="col">Name</th>
