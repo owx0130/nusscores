@@ -33,9 +33,30 @@ export default function CreateTourney() {
         <hr />
       </div>
       <TourneyForm />
-      {data.map((element, index) => (
-        <TourneyIndivListing data={element} key={index} />
-      ))}
-    </>
+      <div className="row" style={{padding: 50 }}>
+        <div className="col"></div>
+        <table className="table table-striped w-75" >
+          <thead >
+            <tr>
+              <th scope="col">Hall Name</th>
+              <th scope="col">Name</th>
+              <th scope="col">Matriculation Number</th>
+              <th scope="col">No. of players</th>
+              <th scope="col">Sport</th>
+              <th scope="col">Bracket Type</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((item) => (
+              <TourneyIndivListing data={item} />
+            ))}
+          </tbody>
+        </table>
+        <div className="col"></div>
+      </div>
+    </> 
   );
 }
+//
+    
