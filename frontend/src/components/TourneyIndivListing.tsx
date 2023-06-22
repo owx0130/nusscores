@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function TourneyIndivListing({ data }: any) {
   return (
     <tr>
@@ -8,7 +10,19 @@ export default function TourneyIndivListing({ data }: any) {
       <td>{data.sport}</td>
       <td>{data.brackettype}</td>
       <td>
-        <a href="/edittourney">Edit</a>
+        <Link
+          to="/edittourney"
+          state={{
+            hallname: data.hallname,
+            name: data.name,
+            matricnumber: data.matricnumber,
+            players: data.players,
+            sport: data.sport,
+            brackettype: data.brackettype,
+          }}
+        >
+          Edit
+        </Link>
       </td>
     </tr>
   );

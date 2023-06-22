@@ -1,15 +1,17 @@
 import { useState } from "react";
 import axios from "axios";
-const TOURNEY_URL = "https://django-backend-p3s7.onrender.com/api/post/";
+const TOURNEY_URL = "https://django-backend-p3s7.onrender.com/api/edit/";
 
-export default function EditForm() {
+export default function EditForm({ data }: any) {
   const [hallname, setHallName] = useState("");
   const [name, setName] = useState("");
-	const [currmatricnumber, setCurrMatricNumber] = useState("");
+  const [currmatricnumber, setCurrMatricNumber] = useState("");
   const [matricnumber, setMatricNumber] = useState("");
   const [players, setPlayers] = useState(0);
   const [sport, setSport] = useState("");
   const [brackettype, setBracketType] = useState("");
+
+  console.log(data);
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -66,7 +68,7 @@ export default function EditForm() {
               value={hallname}
               onChange={(e) => setHallName(e.target.value)}
             >
-              <option selected>Name of Hall/RC</option>
+              <option value="">Name of Hall/RC</option>
               <option value="Temasek Hall">Temasek Hall</option>
               <option value="Eusoff Hall">Eusoff Hall</option>
               <option value="KEVII Hall">KEVII Hall</option>
@@ -133,7 +135,7 @@ export default function EditForm() {
               value={sport}
               onChange={(e) => setSport(e.target.value)}
             >
-              <option selected>Sport</option>
+              <option value="">Sport</option>
               <option value="Football">Football</option>
               <option value="Basketball">Basketball</option>
               <option value="Swimming">Swimming</option>
@@ -155,7 +157,7 @@ export default function EditForm() {
               value={brackettype}
               onChange={(e) => setBracketType(e.target.value)}
             >
-              <option selected>Bracket Type</option>
+              <option value="">Bracket Type</option>
               <option value="Single Elimination">Single Eliminiation</option>
               <option value="Double Elimination">Double Elimination</option>
               <option value="Round Robin">Round Robin</option>
