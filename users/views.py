@@ -27,13 +27,13 @@ def add_item(request):
 @api_view(['PUT'])
 def edit_item(request):
     try:
-        instance = Bracket.objects.get(id=request["id"])
+        instance = Bracket.objects.get(id=request.data["id"])
     except Bracket.DoesNotExist:
         return Response({"error": "Bracket not found."}, status=status.HTTP_404_NOT_FOUND)
 
-    serializer = BracketSerializer(instance, data=request)
+    serializer = BracketSerializer(instance, data=request.data)
     if serializer.is_valid():
         serializer.save()
-        return Response(serializer, status=status.HTTP_200_OK)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
