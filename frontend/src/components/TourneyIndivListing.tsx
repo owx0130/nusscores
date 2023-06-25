@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-const EDIT_URL = "http://localhost:8000/api/edit/";
+const EDIT_URL = "https://django-backend-p3s7.onrender.com/api/edit/";
 
 export default function TourneyIndivListing({ data }: any) {
   const [isEditing, setIsEditing] = useState(false);
