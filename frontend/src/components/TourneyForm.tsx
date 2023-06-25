@@ -1,7 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-const TOURNEY_URL = "https://django-backend-p3s7.onrender.com/api/post/";
-
+const TOURNEY_URL = "http://localhost:8000/api/post/";
 
 export default function TourneyForm() {
   const [hallname, setHallName] = useState("");
@@ -10,8 +9,6 @@ export default function TourneyForm() {
   const [players, setPlayers] = useState(0);
   const [sport, setSport] = useState("");
   const [brackettype, setBracketType] = useState("");
-
-    
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
