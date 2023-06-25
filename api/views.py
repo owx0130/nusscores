@@ -20,8 +20,6 @@ def add_item(request):
   
   return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-
-
 @api_view(['PUT'])
 def edit_item(request):
     try:

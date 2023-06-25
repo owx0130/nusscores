@@ -53,11 +53,6 @@ export default function NavBar() {
                 <Link to="/login" style={navLink}>
                   <span className="dropdown-item">Create a bracket</span>
                 </Link>
-                <Link to="/edittourney" style={navLink}>
-                  <span className="dropdown-item">
-                    Edit existing bracket (NOT WORKING)
-                  </span>
-                </Link>
                 <div className="dropdown-divider"></div>
                 <Link to="/alltourney" style={navLink}>
                   <span className="dropdown-item">See all tournaments</span>

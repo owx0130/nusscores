@@ -3,7 +3,7 @@ import TourneyForm from "../components/TourneyForm";
 import TourneyIndivListing from "../components/TourneyIndivListing";
 import axios from "axios";
 import { useState } from "react";
-const url = "https://django-backend-p3s7.onrender.com/api/get";
+const url = "http://localhost:8000/api/get";
 
 export default function CreateTourney() {
   const [data, setData] = useState([]);
