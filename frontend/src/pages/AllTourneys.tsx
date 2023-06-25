@@ -2,7 +2,7 @@ import NavBar from '../components/NavBar'
 import TourneyIndivListing from '../components/TourneyIndivListing'
 import axios from 'axios'
 import { useState } from 'react'
-const url = "https://django-backend-p3s7.onrender.com/api/get"
+const url = "http://localhost:8000/api/get"
 
 export default function AllTourney() {
   const [data, setData] = useState([]);
@@ -23,7 +23,7 @@ export default function AllTourney() {
       </ul>
       <div className="row">
         <div className="col"></div>
-        <table className="table table-striped w-75">
+        <table className="table table-light w-75">
           <thead>
             <tr>
               <th scope="col">Hall Name</th>
