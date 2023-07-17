@@ -93,7 +93,7 @@ export default function TourneyForm() {
         <div className="form-group row pb-4">
           <div className="col"></div>
           <label className="col-1 col-form-label" htmlFor="players">
-            Number of players
+            Number of Teams
           </label>
           <input
             type="number"
