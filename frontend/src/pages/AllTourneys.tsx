@@ -29,7 +29,7 @@ export default function AllTourney() {
               <th scope="col">Hall Name</th>
               <th scope="col">Name</th>
               <th scope="col">Matriculation Number</th>
-              <th scope="col">No. of players</th>
+              <th scope="col">No. of Teams</th>
               <th scope="col">Sport</th>
               <th scope="col">Bracket Type</th>
               <th scope="col">Actions</th>
